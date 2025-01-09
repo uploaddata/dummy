@@ -13,15 +13,20 @@ import { NextResponse } from "next/server";
 //   return NextResponse.json({ status: "OK" });
 // }
 
-const handleTimeoput = async () => {
-  console.log("Call func");
-  setInterval(() => {
-    console.log("Called every 100 seconds");
-  }, 100000); // 100
-};
+// const handleTimeoput = async () => {
+//   console.log("Call func");
+//   setInterval(() => {
+//     console.log("Called every 100 seconds");
+//   }, 100000); // 100
+// };
+
+// export async function GET() {
+//   console.log("Call API");
+//   handleTimeoput();
+//   return NextResponse.json({ status: "OK" });
+// }
 
 export async function GET() {
-  console.log("Call API");
-  handleTimeoput();
-  return NextResponse.json({ status: "OK" });
+  console.log("Logging every 2 minutes (cron job)");
+  return NextResponse.json({ message: "Logged successfully" });
 }
