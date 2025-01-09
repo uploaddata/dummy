@@ -15,15 +15,13 @@ import { NextResponse } from "next/server";
 
 const handleTimeoput = async () => {
   console.log("Call func");
-  return new Promise(() => {
-    setTimeout(() => {
-      console.log("Called every 100 seconds");
-    }, 100000); // 100 seconds in milliseconds
-  });
+  setTimeout(() => {
+    console.log("Called every 100 seconds");
+  }, 100000); // 100
 };
 
 export async function GET() {
   console.log("Call API");
-  await handleTimeoput();
+  handleTimeoput();
   return NextResponse.json({ status: "OK" });
 }
