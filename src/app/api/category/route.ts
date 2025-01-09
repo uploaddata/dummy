@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export default function GET() {
+export async function GET() {
   const interval = setInterval(() => {
     console.log("Job executed at:", new Date().toISOString());
     // Your core job logic goes here, like database queries, calculations, etc.
