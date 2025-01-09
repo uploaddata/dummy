@@ -13,15 +13,17 @@ import { NextResponse } from "next/server";
 //   return NextResponse.json({ status: "OK" });
 // }
 
-const handleTimeoput = async () => {
-  console.log("Call func");
-  setInterval(() => {
-    console.log("Called every 100 seconds");
-  }, 10000); // 100
-};
+// const handleTimeoput = async () => {
+//   console.log("Call func");
+//   setInterval(() => {
+//     console.log("Called every 100 seconds");
+//   }, 10000); // 100
+// };
 
 export async function GET() {
   console.log("Call API");
-  handleTimeoput();
+  setInterval(() => {
+    console.log("Called every 100 seconds");
+  }, 10000);
   return NextResponse.json({ status: "OK" });
 }
