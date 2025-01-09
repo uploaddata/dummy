@@ -22,6 +22,6 @@ const handleTimeoput = async () => {
 
 export async function GET() {
   console.log("Call API");
-  handleTimeoput();
+  await handleTimeoput();
   return NextResponse.json({ status: "OK" });
 }
