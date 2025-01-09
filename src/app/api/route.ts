@@ -15,7 +15,7 @@ import { NextResponse } from "next/server";
 
 const handleTimeoput = async () => {
   console.log("Call func");
-  setTimeout(() => {
+  setInterval(() => {
     console.log("Called every 100 seconds");
   }, 100000); // 100
 };
